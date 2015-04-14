@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html manifest="match.manifest">
+
+<head>
+<meta charset="UTF-8">
+
+<link rel="icon" type="image/png" href="logopats.png" />
+
+<!-- Integration iOs -->
+<link rel="apple-touch-icon" href="logopats120x120.png">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-startup-image" href="splash320x480.png">
+<link rel="apple-touch-startup-image" sizes="640x1136" href="splash640x1136.png">
+<!-- FIN - Integration iOs -->
+
+
+
+<meta name="viewport" content="width=320,user-scalable=false" />
+<link rel="stylesheet" type="text/css" href="classement.css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"
+         type="text/javascript"></script>
+
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+
+<script src="classement.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<div data-role="page" id="home">
+   <br/>
+    <div data-theme="a" data-role="header">
+        
+        <h3>
+            Classement
+        </h3>
+    </div>        
+    <div data-role="content" >
+  
+        <div class="list-wrapper" data-iscroll>
+        <form class="ui-filterable">
+    <input id="autocomplete-input" data-type="search" placeholder="Joueurs">
+</form>
+
+            <ul data-role="listview" data-filter="true" data-filter-reveal="false" data-input="#autocomplete-input"  id="joueur-list" data-theme="a" data-count-theme="c">
+                
+            </ul>
+        </div>
+     
+        <div class="dtlstabletpanel" data-iscroll>
+         <div class="dtls-wrapper">
+        <ul data-role="listview"  id="joueur-data2" data-theme="a" class="dtlstablet-lst" data-inset="true">
+            
+        </ul>
+        </div>
+        </div>
+    </div>
+    <div data-theme="a" data-role="footer">
+        <h1>Copyright Patriotes de Quebec</h1>
+    </div>              
+</div>
+<div data-role="page" id="headline">
+       <br/>
+    <div data-theme="a" data-role="header">
+      
+        <a href="#home" class="ui-btn-left" data-transition="slide" data-direction="reverse">Retour</a>                        
+       
+        <h3>
+            Detail
+        </h3>
+    </div>        
+    <div data-role="content">
+        <ul data-role="listview"  id="joueur-data" data-theme="a">
+            
+        </ul>
+    </div>
+</div>   
+</body> 
+</html>
