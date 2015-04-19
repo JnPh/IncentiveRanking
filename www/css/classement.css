@@ -66,7 +66,7 @@ margin:12px;
 	border: solid 8px white;
 }
 
-@media all and (min-width: 490px) {
+@media all and (min-width: 1280px) and (orientation : landscape) {
 
 .list-wrapper, .list-wrapper div.iscroll-scroller {
     width: 30% !important;
