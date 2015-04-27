@@ -54,23 +54,28 @@
 </div>
 
 <div data-role="page" id="home" data-theme="a">
-   <br/>
-    <div data-theme="a" data-role="header" data-position="fixed">
-    <br/>
-        
-		 <img border="0" src="img/logopats22x32.png" style="float:left;display:inline"/>
+ 
+    <div data-theme="a" data-role="header" data-position="fixed" style="padding-top:25px">
+                          
 		 <h1>Patriotes</h1>
+		<a href="#popupExplain" data-rel="popup" class="ui-btn-right ui-corner-all ui-shadow" style="margin-top:25px" >?</a>  	 
+		 	
+               
+               		<div data-role="popup" data-position-to="window" data-shadow="true" data-overlay-theme="a" id="popupExplain">
+						<p>Le classement MVP est basé sur les présences aux pratiques et les participations aux matchs et aux tournois tout au long de la saison.<p>
+						<p>Les indicateurs <img src="img/rank_up.png"/> et <img src="img/rank_down.png"/> montre le sens de la progression au classement du joueur depuis le dernier match ou la dernière pratique. Le chiffre qui suit, est le nombre de rang gagnés ou perdus dans le classement. </p>
+					</div>
+					
 	</div>        
   
 
     <div data-role="content" >
-    
-   
+
     <ul data-role="listview" data-theme="a" data-divider-theme="a" id="whatsnext">
 	</ul>
 	
     
-  <br/>
+  		<br/>
         <div class="list-wrapper" data-iscroll>
           
        <!-- <form class="ui-filterable">
@@ -78,7 +83,9 @@
 </form> -->
 
             <ul data-role="listview" data-divider-theme="a" data-filter="true" data-filter-reveal="false" data-input="#autocomplete-input"  id="joueur-list" data-theme="a" data-count-theme="c">
-               <li data-role="list-divider" data-position="fixed" >Classement MVP</li> 
+               <li data-role="list-divider" data-position="fixed" >
+               Classement MVP
+               </li> 
             </ul>
         </div>
      
