@@ -126,7 +126,8 @@ $(document).on('pagebeforeshow', '#headline', function()
             $('#joueur-data').append('<li>Nom: '+row.data.jou_nom+'</li>');
             $('#joueur-data').append('<li>Prenom: '+row.data.jou_prenom+'</li>');
             $('#joueur-data').append('<li>Position : '+row.data.jou_position +'</li>');   
-            $('#joueur-data').append('<li>Points MVP: '+row.data.jou_actif+'</li>');             
+            $('#joueur-data').append('<li>Points implication : '+row.data.points+'</li>');             
+            $('#joueur-data').append('<li>Progession : '+row.data.delta+'</li>');           
             $('#joueur-data').listview('refresh');            
         }
     });    
