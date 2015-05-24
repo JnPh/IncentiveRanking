@@ -1,7 +1,9 @@
+var SWroot = 'http://famille.mazet.free.fr/FG/SW/1.0/';
+ 
 function CheckSupportedVersion()
 {
 
-var url = 'http://famille.mazet.free.fr/FG/',
+var url = SWroot,
         service = 'checkversion.php';
                
       console.log(url + service );        
@@ -33,7 +35,7 @@ var url = 'http://famille.mazet.free.fr/FG/',
 function GetParticipants(event)
 {
 
-var url = 'http://famille.mazet.free.fr/FG/',
+var url = SWroot,
         service = 'participantsevent.php?e=' + event;
             
       console.log(url + service );        
@@ -63,7 +65,7 @@ var url = 'http://famille.mazet.free.fr/FG/',
 function LoadData() {
 
 // Get ranking info.
-    var url = 'http://famille.mazet.free.fr/FG/',
+    var url = SWroot,
         service = 'joueurs.php';
                
       console.log(url + service );        
