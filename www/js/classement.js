@@ -3,6 +3,8 @@ var SWroot = 'http://famille.mazet.free.fr/FG/SW/1.0/';
 function CheckSupportedVersion()
 {
 
+
+
 var url = SWroot,
         service = 'checkversion.php';
                

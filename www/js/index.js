@@ -46,4 +46,6 @@ var app = {
         CheckSupportedVersion();
  
     }
+    
 };
+
