@@ -137,11 +137,17 @@ $(document).on('pagebeforeshow', '#headline', function()
     });    
 } ); 
 
-$(document).on('vclick', '#joueur-list li a', function(){  
+$(document).on('vclick', '#joueur-list li a', function(event){  
+  
+  	//2015-08-27 Pour éviter le glitch du click perçu par la liste des whatsnext.
+  	event.stopPropagation();
+  	
+  	//Id du joueur pour lequel afficher la fiche
     joueurInfo.id = $(this).attr('data-id');
     
      if(window.styleMedia.matchMedium("screen and (max-width: 480px)")){
   $.mobile.changePage( "#headline", { transition: "slide", changeHash: false });
+  
     }
     else LoadTabletJoueurData();
    
