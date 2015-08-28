@@ -172,13 +172,16 @@ $(document).on('pagebeforeshow', '#event', function()
     });    
 } ); 
 
-$(document).on('vclick', '#whatsnext li a', function(){  
-    eventInfo.id = $(this).attr('data-id');
+$(document).on('vclick', '#whatsnext li a', function(e){  
+    if(!e.isPropagationStopped()) 
+    {
+    	eventInfo.id = $(this).attr('data-id');
 
-	if(window.styleMedia.matchMedium("screen and (max-width: 480px)")){
-  		$.mobile.changePage( "#event", { transition: "slide", changeHash: false });
-    }
-     else LoadTabletEventData();
+		if(window.styleMedia.matchMedium("screen and (max-width: 480px)")){
+  			$.mobile.changePage( "#event", { transition: "slide", changeHash: false });
+    	}
+     	else LoadTabletEventData();
+     }
 });
    
 
