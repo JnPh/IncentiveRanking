@@ -552,7 +552,7 @@ html .ui-body-c .ui-bar-inherit,
 html body .ui-group-theme-c .ui-bar-inherit {
 	background-color: #2f3b6f /*{c-bar-background-color}*/;
 	border-color: #5d5f98 /*{c-bar-border}*/;
-	color: #acaecd /*{c-bar-color}*/;
+	color: #efeff1 /*{c-bar-color}*/;
 	text-shadow: 0 /*{c-bar-shadow-x}*/ 0px /*{c-bar-shadow-y}*/ 0 /*{c-bar-shadow-radius}*/ #444444 /*{c-bar-shadow-color}*/;
 	font-weight: bold;
 }
