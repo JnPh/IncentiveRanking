@@ -126,7 +126,7 @@ $(document).on('pagebeforeshow', '#headline', function()
     $('#joueur-data').empty();
     $.each(joueurInfo.result, function(i, row) {
         if(row.data.jou_id == joueurInfo.id) {
-            $('#joueur-data').append('<img class="playerdetails" src="'+row.data.jou_photo+'">');
+            $('#joueur-data').append('<img class="playerdetails" src="'+ row.data.jou_photo.toString().replace("150","300") +'">');
             $('#joueur-data').append('<li>Nom: '+row.data.jou_nom+'</li>');
             $('#joueur-data').append('<li>Prenom: '+row.data.jou_prenom+'</li>');
             $('#joueur-data').append('<li>Position : '+row.data.jou_position +'</li>');   

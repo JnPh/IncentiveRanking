@@ -26,22 +26,28 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
-         <link rel="stylesheet" href="css/themes/patriotes.css" />
-  		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
-  		<link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/classement.css">
-        <title>Classement</title>
+
+      <title>Patriotes de Quebec</title>
         
-        
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <link rel="stylesheet" href="css/themes/PatriotesII.css" />
+   <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+   <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/classement.css">
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
 	</head>
     
 <body>
 
 
-<div data-role="page" id="welcome" data-theme="a">
+
+
+
+<div data-role="page" id="welcome" data-theme="c">
   
   <div data-role="content" class="app">
             <h1 class="welcome">Patriotes</h1>
@@ -53,92 +59,103 @@
   
 </div>
 
-<div data-role="page" id="home" data-theme="a">
 
-    <div data-theme="a" data-role="header" data-position="fixed" style="padding-top:25px">
+
+
+
+<div data-role="page" id="home" data-theme="c">
+
+    <div data-theme="c" data-role="header" data-position="fixed" style="padding-top:25px">
                           
 		 <h1>Patriotes</h1>
-		<a href="#popupExplain" data-rel="popup" class="ui-btn-right ui-corner-all ui-shadow" style="margin-top:25px" >?</a>  	 
+		<a href="#popupExplain" data-rel="popup" data-role="button" data-icon="info" data-iconpos="notext"  data-theme="c" class="ui-btn-right" style="margin-top:25px" ></a>  	 
 		 	
             <div data-role="popup" data-position-to="window" data-shadow="true" data-overlay-theme="a" id="popupExplain">
 						<p>Le classement MVP est basé sur les présences aux pratiques et les participations aux matchs et aux tournois tout au long de la saison.<p>
 						<p>Les indicateurs <img src="img/rank_up.png"/> et <img src="img/rank_down.png"/> montre le sens de la progression au classement du joueur depuis le dernier match ou la dernière pratique. Le chiffre qui suit, est le nombre de rangs gagnés ou perdus dans le classement. </p>
 			</div>    
-            
-              	
+                          	
 	</div>        
   
 
-    <div data-role="content" >
+    <div data-role="content">
     
 
- 	<div class="list-wrapper">
-    	
-    	    
-    	
-    	<ul data-role="listview" data-theme="a" data-divider-theme="a" id="whatsnext">
-		</ul>
- 	
-    
-  		<br/>
-  		
-    
-          
-       <!-- <form class="ui-filterable">
-    <input id="autocomplete-input" data-type="search" placeholder="Joueurs">
-</form> -->
+		<div class="list-wrapper">
+ 
+				<ul data-role="listview" data-theme="c" data-divider-theme="c" id="whatsnext">
+				</ul>
+  
+				<br/>
 
-            <ul data-role="listview" data-divider-theme="a" id="joueur-list" data-theme="a" data-count-theme="c">
-               <li data-role="list-divider">
-               Classement MVP
-               </li> 
-            </ul>
-    </div>
+				<ul data-role="listview" data-divider-theme="c" id="joueur-list" data-count-theme="c">
+				   <li data-role="list-divider" >
+				   Classement MVP
+				   </li> 
+				</ul>
+		</div>
      
         <div class="dtlstabletpanel" >
-         <div class="dtls-wrapper">
-        <ul data-role="listview"  id="tabletpanel" data-theme="a" class="dtlstablet-lst" data-inset="true">
-            
-        </ul>
-        </div>
-        </div>
+         	<div class="dtls-wrapper">
+        		
+        		<ul data-role="listview"  id="tabletpanel" data-theme="c" class="dtlstablet-lst" data-inset="true">
+            	</ul>
+       		 
+       		 </div>
+        
+    	</div>
     </div>
-    <div data-theme="a" data-role="footer">
+    
+    
+    <div data-theme="c" data-role="footer">
         <h1 id="foot">Copyright Patriotes de Quebec</h1>
-    </div>              
+    </div>     
+    
+             
 </div>
+
+
+
+
+
+
+
 <div data-role="page" id="headline">
-        <br/>
-    <div data-theme="a" data-role="header">
-     
-        <a href="#home" class="ui-btn ui-corner-all ui-shadow ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Retour</a>                        
+        
+    <div data-theme="c" data-role="header" data-position="fixed" style="padding-top:25px">
+                          
+		 <h1>Patriotes</h1>
+		<a href="#home" data-role="button" data-icon="back" data-iconpos="notext" data-theme="c" data-transition="slide" data-direction="reverse" style="margin-top:25px" ></a>  	 
+                    
        
-        <h3>
-            Détails
-        </h3>
     </div>        
-    <div data-role="content">
-        <ul data-role="listview"  id="joueur-data" data-theme="a">
+    <div data-role="content" data-theme="c">
+        <ul data-role="listview"  id="joueur-data" data-theme="c">
             
         </ul>
     </div>
 </div> 
 
-<div data-role="page" id="event">
-       <br/>
-    <div data-theme="a" data-role="header">     
-         
-        <a href="#home" class="ui-btn ui-corner-all ui-shadow ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Retour</a>                              
-        <h3>
-            Détails
-        </h3>
+
+
+
+
+
+
+<div data-role="page" id="event"  data-theme="c">
+       
+    <div data-theme="c" data-role="header" data-position="fixed" style="padding-top:25px">
+                          
+		 <h1>Patriotes</h1>
+		<a href="#home" data-role="button" data-icon="back" data-iconpos="notext" data-theme="c" data-transition="slide" data-direction="reverse" style="margin-top:25px" ></a>  	 
+                
     </div>        
-    <div data-role="content">
-        <ul data-role="listview"  id="event-data" data-theme="a">
+    <div data-role="content" data-theme="c">
+        <ul data-role="listview"  id="event-data" data-theme="c">
             
         </ul>
         
-        <ul data-role="listview"  id="event-players" data-theme="a">
+        <ul data-role="listview"  id="event-players" data-theme="c">
            
         </ul>
     </div>
