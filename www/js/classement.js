@@ -250,7 +250,7 @@ var ajax = {
 			setTimeout(function () {
 				$(':mobile-pagecontainer').pagecontainer('change', '#home', {
 				transition: 'slideup',
-				changeHash: false,
+				changeHash: true,
 				reverse: false,
 				showLoadMsg: true
 				});
