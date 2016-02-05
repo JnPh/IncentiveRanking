@@ -28,6 +28,7 @@ var url = SWroot,
             console.log(arguments);
             console.log(error);
             console.log(request.stringify); 
+            alert("Vérification de version a échoué :(");
            
         }
     });  
@@ -66,6 +67,7 @@ var url = SWroot,
 
 function LoadData() {
 
+alert("LoadData");
 // Get ranking info.
     var url = SWroot,
         service = 'joueurs.php';
@@ -88,11 +90,12 @@ function LoadData() {
             console.log(arguments);
             console.log(error);
               console.log(request.stringify); 
+              alert("Récupération du classement a échoué :(");
            
         }
     });  
     
-    
+alert("whatsnext");    
     // Get What's next info.
     
     service = 'whatsnext.php';
@@ -115,6 +118,7 @@ function LoadData() {
             console.log(arguments);
             console.log(error);
               console.log(request.stringify); 
+              alert("Récupération du whatsnext a échoué :(");
            
         }
     });  
