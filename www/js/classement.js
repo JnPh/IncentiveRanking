@@ -249,6 +249,7 @@ var ajax = {
          //Si la version est supporté on charge le data et on affiche la homepage
          if(SupportedVersions.indexOf(app.currentversion) > -1)
          {  
+         alert("Supporté");
 			LoadData();
 		
 			setTimeout(function () {
