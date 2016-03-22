@@ -18,6 +18,7 @@ var url = SWroot,
         
         success: function (result) {
             
+            alert('success!'); 
             
             ajax.parseVersion(result);
           
