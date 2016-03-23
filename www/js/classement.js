@@ -148,7 +148,7 @@ $(document).on('click', '#joueur-list li a', function(event){
     joueurInfo.id = $(this).attr('data-id');
     
      if(window.styleMedia.matchMedium("screen and (max-width: 480px)")){
-  $.mobile.changePage( "#headline", { transition: "slide", changeHash: false });
+  $.mobile.changePage( "#headline", { transition: "slide", changeHash: true });
   
     }
     else LoadTabletJoueurData();
@@ -179,7 +179,7 @@ $(document).on('click', '#whatsnext li a', function(e){
     	eventInfo.id = $(this).attr('data-id');
 
 		if(window.styleMedia.matchMedium("screen and (max-width: 480px)")){
-  			$.mobile.changePage( "#event", { transition: "slide", changeHash: false });
+  			$.mobile.changePage( "#event", { transition: "slide", changeHash: true });
     	}
      	else LoadTabletEventData();
     
