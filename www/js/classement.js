@@ -18,8 +18,6 @@ var url = SWroot,
         
         success: function (result) {
             
-            alert('success!'); 
-            
             ajax.parseVersion(result);
           
         },
@@ -30,7 +28,6 @@ var url = SWroot,
             console.log(arguments);
             console.log(error);
             console.log(request.stringify); 
-            alert("Vérification de version a échoué :(");
            
         }
     });  
@@ -69,7 +66,7 @@ var url = SWroot,
 
 function LoadData() {
 
-alert("LoadData");
+
 // Get ranking info.
     var url = SWroot,
         service = 'joueurs.php';
@@ -92,12 +89,12 @@ alert("LoadData");
             console.log(arguments);
             console.log(error);
               console.log(request.stringify); 
-              alert("Récupération du classement a échoué :(");
+              
            
         }
     });  
     
-alert("whatsnext");    
+  
     // Get What's next info.
     
     service = 'whatsnext.php';
@@ -120,7 +117,7 @@ alert("whatsnext");
             console.log(arguments);
             console.log(error);
               console.log(request.stringify); 
-              alert("Récupération du whatsnext a échoué :(");
+              
            
         }
     });  
@@ -251,7 +248,7 @@ var ajax = {
          //Si la version est supporté on charge le data et on affiche la homepage
          if(SupportedVersions.indexOf(app.currentversion) > -1)
          {  
-         alert("Supporté");
+       
 			LoadData();
 		
 			setTimeout(function () {
