@@ -41,7 +41,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
              
-        $(".event.listening").hide();
+        //$(".event.listening").hide();
       
         CheckSupportedVersion();
  
