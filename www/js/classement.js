@@ -9,7 +9,7 @@ var url = SWroot,
         service = 'checkversion.php';
                
       console.log(url + service );  
-      alert(url + service);      
+           
                
      $.ajax({
         url: url + service ,
