@@ -192,7 +192,7 @@ $(document).on("pagecontainershow", function (e, ui) {
     console.log($.mobile.navigate.history.stack);
     $.mobile.navigate.history.stack.splice(0,1);
     $(ui.prevPage).remove();
-    console.log($.mobile.navigate.history.stack);
+    alert($.mobile.navigate.history.stack[0]);
   }
 });
    
