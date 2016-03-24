@@ -189,8 +189,10 @@ $(document).on('click', '#whatsnext li a', function(e){
 //Avoid going back to welcome/loading page
 $(document).on("pagecontainershow", function (e, ui) {
   if (typeof ui.prevPage[0] !== "undefined" && ui.prevPage[0].id == "welcome") {
+    console.log($.mobile.navigate.history.stack);
     $.mobile.navigate.history.stack.splice(0,1);
     $(ui.prevPage).remove();
+    console.log($.mobile.navigate.history.stack);
   }
 });
    
