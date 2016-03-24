@@ -192,7 +192,7 @@ $(document).on("pagecontainershow", function (e, ui) {
     console.log($.mobile.navigate.history.stack);
     $.mobile.navigate.history.stack.splice(0,1);
     $(ui.prevPage).remove();
-    alert($.mobile.navigate.history.stack[0]);
+    alert($.mobile.navigate.history.stack[0].hash);
   }
 });
    
@@ -265,9 +265,7 @@ var ajax = {
 			setTimeout(function () {
 				$(':mobile-pagecontainer').pagecontainer('change', '#home', {
 				transition: 'slideup',
-				changeHash: true,
-				reverse: true,
-				showLoadMsg: true
+
 				});
 			  }, 2000);
     	  }
