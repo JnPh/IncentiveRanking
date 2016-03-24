@@ -184,6 +184,15 @@ $(document).on('click', '#whatsnext li a', function(e){
      	else LoadTabletEventData();
     
 });
+
+
+//Avoid going back to welcome/loading page
+$(document).on("pagecontainershow", function (e, ui) {
+  if (typeof ui.prevPage[0] !== "undefined" && ui.prevPage[0].id == "welcome") {
+    $.mobile.navigate.history.stack.splice(0,1);
+    $(ui.prevPage).remove();
+  }
+});
    
 
 var joueurInfo = {
@@ -254,8 +263,8 @@ var ajax = {
 			setTimeout(function () {
 				$(':mobile-pagecontainer').pagecontainer('change', '#home', {
 				transition: 'slideup',
-				changeHash: false,
-				reverse: false,
+				changeHash: true,
+				reverse: true,
 				showLoadMsg: true
 				});
 			  }, 2000);
