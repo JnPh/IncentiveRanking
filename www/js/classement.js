@@ -148,7 +148,7 @@ $(document).on('click', '#joueur-list li a', function(event){
     joueurInfo.id = $(this).attr('data-id');
     
      if(window.styleMedia.matchMedium("screen and (max-width: 480px)")){
-  $.mobile.changePage( "#headline", { transition: "slide", changeHash: true, reverse: true });
+  $.mobile.changePage( "#headline", { transition: "slide" });
   
     }
     else LoadTabletJoueurData();
@@ -179,7 +179,7 @@ $(document).on('click', '#whatsnext li a', function(e){
     	eventInfo.id = $(this).attr('data-id');
 
 		if(window.styleMedia.matchMedium("screen and (max-width: 480px)")){
-  			$.mobile.changePage( "#event", { transition: "slide", changeHash: true, reverse: true });
+  			$.mobile.changePage( "#event", { transition: "slide" });
     	}
      	else LoadTabletEventData();
     
@@ -189,7 +189,7 @@ $(document).on('click', '#whatsnext li a', function(e){
 //Avoid going back to welcome/loading page
 $(document).on("pagecontainershow", function (e, ui) {
   if (typeof ui.prevPage[0] !== "undefined" && ui.prevPage[0].id == "welcome") {
-    console.log($.mobile.navigate.history.stack);
+    alert($.mobile.navigate.history.stack[0].hash);
     $.mobile.navigate.history.stack.splice(0,1);
     $(ui.prevPage).remove();
     alert($.mobile.navigate.history.stack[0].hash);
