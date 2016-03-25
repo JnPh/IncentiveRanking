@@ -72,7 +72,7 @@ function LoadData() {
     var url = SWroot,
         service = 'joueurs.php';
                
-      console.log(url + service );        
+              
                
      $.ajax({
         url: url + service ,
@@ -210,6 +210,8 @@ var ajax = {
     parseRank:function(result){ 
     eval(result); 
         joueurInfo.result = result;
+        
+        $('#joueur-list').empty().append('<li data-role="list-divider" >Classement MVP</li>');
         $.each(result, function(i, row) {
             //console.log(JSON.stringify(row));
             
@@ -241,7 +243,7 @@ var ajax = {
             str = str.concat('<p class="ui-li-aside"><strong>'+row.data.ev_heure+'</strong></p>');   
    			str = str.concat('</a></li>');
              
-            $('#whatsnext').append(str); 
+            $('#whatsnext').empty().append(str); 
         });
         $('#whatsnext').listview('refresh');
         
