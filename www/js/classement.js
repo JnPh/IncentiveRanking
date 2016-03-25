@@ -18,7 +18,7 @@ var url = SWroot,
         
         success: function (result) {
             
-            $(".event.listening").hide();
+           // $(".event.listening").hide();
             ajax.parseVersion(result);
           
         },
@@ -272,7 +272,7 @@ var ajax = {
     	  }
     	  else //Sinon on invite à ce mettre à jour
     	  {
-    	   
+    	    $(".event.listening").hide();
     	    $(".event.updaterequiered").show();
     	    alert("Veuillez mettre à jour votre application.");
     	  }
