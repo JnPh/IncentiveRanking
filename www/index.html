@@ -66,10 +66,29 @@
 
 <div data-role="page" id="home" data-theme="c">
 
+    <div data-role="panel" data-position="left" id="menupanel">
+		<ul data-role="listview" data-theme="c" data-divider-theme="c" id="menulist">
+			<li data-role="list-divider" >Évènements</li>
+			<li><a href="#allevents">Tous les évènements</a></li>
+			<li data-role="list-divider" >Classements</li>
+			<li><a href="">Dévoués aux matchs</a></li>
+			<li>Dévoués aux pratiques</li>
+			<li>Dévoués aux Paartys !</li>
+			<li>Dévoués au CA</li>
+			<li data-role="list-divider" >Stats</li>
+			<li>Buts</li>
+			<li>Points</li>
+			<li>Contres/Arrêts</li>
+		</ul>
+	</div><!-- Pannel -->
+
+
     <div data-theme="c" data-role="header" data-position="fixed" style="padding-top:25px">
                           
 		 <h1>Patriotes</h1>
 		<a href="#popupExplain" data-rel="popup" data-role="button" data-icon="info" data-iconpos="notext"  data-theme="c" class="ui-btn-right" style="margin-top:25px" ></a>  	 
+		<a href="#menupanel" data-role="button" data-icon="bars" data-iconpos="notext"  data-theme="c" class="ui-btn-left" style="margin-top:25px" ></a>
+		
 		 	
             <div data-role="popup" data-position-to="window" data-shadow="true" data-overlay-theme="a" id="popupExplain">
 						<p>Le classement MVP est basé sur les présences aux pratiques et les participations aux matchs et aux tournois tout au long de la saison.<p>
