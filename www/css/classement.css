@@ -22,6 +22,12 @@ padding: 0 !important;
     width: 100% !important;
 }
 
+#menupanel
+{
+	background-color: #cccccc; !important;
+}
+
+
 .dtlstabletpanel
 {
 display:none;

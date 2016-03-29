@@ -64,21 +64,23 @@
 
 
 
+
+
 <div data-role="page" id="home" data-theme="c">
 
-    <div data-role="panel" data-position="left" id="menupanel">
-		<ul data-role="listview" data-inset="false" data-theme="a" data-divider-theme="c" id="menulist">
+    <div data-role="panel" data-position="left" id="menupanel" class="menu">
+		<ul data-role="listview" data-inset="true" data-theme="a"  id="menulist">
 			<li data-role="list-divider" >Évènements</li>
-			<li>Tous les évènements</li>
-			<li data-role="list-divider" >Classements</li>
-			<li>Dévoués aux matchs</li>
-			<li>Dévoués aux pratiques</li>
-			<li>Dévoués aux Paartys !</li>
-			<li>Dévoués au CA</li>
-			<li data-role="list-divider" >Stats</li>
-			<li>Buts</li>
-			<li>Points</li>
-			<li>Contres/Arrêts</li>
+			<li><a href="#">Tous les évènements</a></li>
+			<li data-role="list-divider"   >Classements</li>
+			<li><a href="#">Dévoués aux matchs</a></li>
+			<li><a href="#">Dévoués aux pratiques</a></li>
+			<li><a href="#">Dévoués aux Paartys !</a></li>
+			<li><a href="#">Dévoués au CA</a></li>
+			<li data-role="list-divider"  >Stats</li>
+			<li><a href="#">Buts</a></li>
+			<li><a href="#">Points</a></li>
+			<li><a href="#">Contres/Arrêts</a></li>
 		</ul>
 	</div><!-- Pannel -->
 
@@ -184,7 +186,7 @@
 
         
         <script type="text/javascript" src="cordova.js"></script>
-        <script src="js/classement.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript">
             app.initialize();

@@ -43,7 +43,7 @@ var app = {
              
         //$(".event.listening").hide();
       
-        CheckSupportedVersion();
+        SplashPage.CheckSupportedVersion();
  
     }
     

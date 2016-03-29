@@ -125,9 +125,11 @@ function LoadData() {
     
 }
 
-$(document).on('pagebeforeshow', '#headline', function()
-{      
-    $('#joueur-data').empty();
+$(document).on('pagebeforeshow', '#headline', FillinPlayerDetails); 
+
+function FillinPlayerDetails()
+{
+$('#joueur-data').empty();
     $.each(joueurInfo.result, function(i, row) {
         if(row.data.jou_id == joueurInfo.id) {
             $('#joueur-data').append('<img class="playerdetails" src="'+ row.data.jou_photo.toString().replace("150","300") +'">');
@@ -139,7 +141,7 @@ $(document).on('pagebeforeshow', '#headline', function()
             $('#joueur-data').listview('refresh');            
         }
     });    
-} ); 
+}
 
 $(document).on('click', '#joueur-list li a', function(event){  
   
@@ -158,9 +160,11 @@ $(document).on('click', '#joueur-list li a', function(event){
 });
 
 
-$(document).on('pagebeforeshow', '#event', function()
-{      
-    $('#event-data').empty();
+$(document).on('pagebeforeshow', '#event', FillinEventDetails); 
+
+function FillinEventDetails()
+{
+ $('#event-data').empty();
     $.each(eventInfo.result, function(i, row) {
         if(row.data.ev_id == eventInfo.id) {
             $('#event-data').append('<li>Date : ' + row.data.ev_date +'</li>');
@@ -173,7 +177,7 @@ $(document).on('pagebeforeshow', '#event', function()
             GetParticipants(eventInfo.id);          
         }
     });    
-} ); 
+}
 
 $(document).on('click', '#whatsnext li a', function(e){  
     
