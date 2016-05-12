@@ -1,6 +1,5 @@
-
-.ui-page {
-background: -webkit-linear-gradient(left top, #0a0b49 , #7979bf); /* For Safari 5.1 to 6.0 */
+[data-role=page], .ui-panel-wrapper {
+  background: -webkit-linear-gradient(left top, #0a0b49 , #7979bf); /* For Safari 5.1 to 6.0 */
 background: -o-linear-gradient(bottom right, #0a0b49, #7979bf); /* For Opera 11.1 to 12.0 */
 background: -moz-linear-gradient(bottom right, #0a0b49, #7979bf); /* For Firefox 3.6 to 15 */
 background: linear-gradient(to bottom right, #0a0b49 , #7979bf); /* Standard syntax */
@@ -13,7 +12,12 @@ background:url(../img/splash640x1136.png) repeat center top;
 padding: 0 !important;
 
 }
- 
+
+#menupanel
+{
+	background-color: rgba(222,222,222,1); !important;
+}
+
 .ui-listview {
     margin: 0 !important;
 }
@@ -35,16 +39,14 @@ display:none;
 
 }
 
-.dtlstablet-lst
-{
 
-}
 
 .dtls-wrapper
 {
 margin:12px;
 }
 
+/*
 #event-players li.staticlist {
     background-color: rgba(255,255,255,0.9); !important;
     background-image: url('') !important;
@@ -66,6 +68,14 @@ margin:12px;
     background-image: url('') !important;
 }
 
+#practice-players-list li a{
+    background-color: rgba(255,255,255,0.9); !important;
+    background-image: url('') !important;
+}
+*/
+
+li { opacity: 0.9; }
+
 .playerdetails
 {
 	text-align:center;
@@ -73,7 +83,7 @@ margin:12px;
 	border: solid 8px white;
 }
 
-@media all and (min-width: 1280px) and (orientation:landscape) {
+@media all and (min-width: 1024px) and (orientation:landscape) {
 
 .list-wrapper, .list-wrapper div.iscroll-scroller {
     width: 30% !important;

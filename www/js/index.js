@@ -19,6 +19,10 @@
 
 var app = {
 	currentversion: "1.0",
+	CurrentPlayerId: null,
+	CurrentEventId: null,
+	CurrentPlayersCollection: null,
+	CurrentEventsCollection: null,
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -49,6 +53,7 @@ var app = {
     
    
 };
+
 
 
     

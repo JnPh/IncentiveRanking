@@ -48,10 +48,10 @@
 
 
 
-<div data-role="page" id="welcome" data-theme="c">
+<div data-role="page" id="splash" data-theme="c">
   
   <div data-role="content" class="app">
-            <h1 class="welcometitle">Patriotes</h1>
+            <h1 class="splashtitle">Patriotes</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Chargement</p>
                 <p class="event updaterequiered">Mise à jour requise</p>
@@ -62,27 +62,22 @@
 
 
 
-
-
-
-
-<div data-role="page" id="home" data-theme="c">
+<div data-role="page" id="home">
 
     <div data-role="panel" data-position="left" id="menupanel" class="menu">
-		<ul data-role="listview" data-inset="true" data-theme="a"  id="menulist">
+		<ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="a" id="menulist">
 			<li data-role="list-divider" >Évènements</li>
-			<li><a href="#">Tous les évènements</a></li>
-			<li data-role="list-divider"   >Classements</li>
-			<li><a href="#">Dévoués aux matchs</a></li>
-			<li><a href="#">Dévoués aux pratiques</a></li>
-			<li><a href="#">Dévoués aux Paartys !</a></li>
-			<li><a href="#">Dévoués au CA</a></li>
+			<li><a href="#futureevents" data-transition="flow">Prochainement..</a></li>
+			<li><a href="#allevents" data-transition="flow">Tous les évènements</a></li>
+			<li data-role="list-divider">Classements</li>
+			<li><a href="#matchranking"  data-transition="flow">Dévoués aux matchs</a></li>
+			<li><a href="#practicesranking"  data-transition="flow">Dévoués aux pratiques</a></li>
 			<li data-role="list-divider"  >Stats</li>
-			<li><a href="#">Buts</a></li>
-			<li><a href="#">Points</a></li>
-			<li><a href="#">Contres/Arrêts</a></li>
+			<li>Buts</li>
+			<li>Points</li>
+			<li>Contres/Arrêts</li>
 		</ul>
-	</div><!-- Pannel -->
+	</div>
 
 
     <div data-theme="c" data-role="header" data-position="fixed" style="padding-top:25px">
@@ -105,12 +100,12 @@
 
 		<div class="list-wrapper">
  
-				<ul data-role="listview" data-theme="c" data-divider-theme="c" id="whatsnext">
+				<ul data-role="listview" data-theme="a" data-divider-theme="c" id="whatsnext">
 				</ul>
   
-				<br/>
+			
 
-				<ul data-role="listview" data-divider-theme="c" id="joueur-list" data-count-theme="c">
+				<ul data-role="listview" data-theme="a" data-divider-theme="a" id="joueur-list" data-count-theme="c">
 				    
 				</ul>
 		</div>
@@ -120,6 +115,11 @@
         		
         		<ul data-role="listview"  id="tabletpanel" data-theme="c" class="dtlstablet-lst" data-inset="true">
             	</ul>
+            	
+            	<br/>
+            	
+            	<ul data-role="listview"  id="eventplayerslist" data-theme="c" class="dtlstablet-lst" data-inset="true">
+            	</ul>
        		 
        		 </div>
         
@@ -128,7 +128,7 @@
     
     
     <div data-theme="c" data-role="footer">
-        <h1 id="foot">Copyright Patriotes de Quebec</h1>
+        <h1 id="foot">...</h1>
     </div>     
     
              
@@ -140,12 +140,12 @@
 
 
 
-<div data-role="page" id="headline">
+<div data-role="page" id="playerdetails">
         
     <div data-theme="c" data-role="header" data-position="fixed" style="padding-top:25px">
                           
 		 <h1>Patriotes</h1>
-		<a href="#home" data-role="button" data-icon="back" data-iconpos="notext" data-theme="c" data-transition="slide" data-direction="reverse" style="margin-top:25px" ></a>  	 
+		<a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="notext" data-theme="c" data-transition="slide" data-direction="reverse" style="margin-top:25px" ></a>  	 
                     
        
     </div>        
@@ -162,12 +162,12 @@
 
 
 
-<div data-role="page" id="event"  data-theme="c">
+<div data-role="page" id="eventdetails"  data-theme="c">
        
     <div data-theme="c" data-role="header" data-position="fixed" style="padding-top:25px">
                           
 		 <h1>Patriotes</h1>
-		<a href="#home" data-role="button" data-icon="back" data-iconpos="notext" data-theme="c" data-transition="slide" data-direction="reverse" style="margin-top:25px" ></a>  	 
+		<a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="notext" data-theme="c" data-transition="slide" data-direction="reverse" style="margin-top:25px" ></a>  	 
                 
     </div>        
     <div data-role="content">
@@ -182,8 +182,187 @@
 </div>   
 
 
-					
 
+<div data-role="page" id="practicesranking" data-theme="c">
+
+    <div data-theme="c" data-role="header" data-position="fixed" style="padding-top:25px">
+                          
+		 <h1>Pratiques</h1>
+		<a href="#popupExplain" data-rel="popup" data-role="button" data-icon="info" data-iconpos="notext"  data-theme="c" class="ui-btn-right" style="margin-top:25px" ></a>  	 
+		<a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="notext" data-theme="c" data-transition="slide" data-direction="reverse" class="ui-btn-left" style="margin-top:25px" ></a>  	 
+         
+            <div data-role="popup" data-position-to="window" data-shadow="true" data-overlay-theme="a" id="popupExplain">
+						<p>Ce classement est basé uniquement sur les présences aux pratiques tout au long de la saison.<p>
+						<p>Les indicateurs <img src="img/rank_up.png"/> et <img src="img/rank_down.png"/> montre le sens de la progression au classement du joueur depuis dernière pratique. Le chiffre qui suit, est le nombre de rangs gagnés ou perdus dans le classement. </p>
+			</div>    
+                          	
+	</div>        
+  
+
+    <div data-role="content">
+    
+
+		<div class="list-wrapper">
+ 
+				
+				<ul data-role="listview" data-theme="a" data-divider-theme="c" id="practice-players-list" data-count-theme="c">
+				    
+				</ul>
+		</div>
+     
+        <div class="dtlstabletpanel" >
+         	<div class="dtls-wrapper">
+        		
+        		<ul data-role="listview"  id="practice-tabletpanel" data-theme="c" class="dtlstablet-lst" data-inset="true">
+            	</ul>
+       		 
+       		 </div>
+        
+    	</div>
+    </div>
+    
+    
+    <div data-theme="c" data-role="footer">
+        <h1 id="foot">...</h1>
+    </div>     
+    
+             
+</div>
+					
+<div data-role="page" id="matchranking" data-theme="c">
+
+    <div data-theme="c" data-role="header" data-position="fixed" style="padding-top:25px">
+                          
+		 <h1>Matchs</h1>
+		<a href="#popupExplain" data-rel="popup" data-role="button" data-icon="info" data-iconpos="notext"  data-theme="c" class="ui-btn-right" style="margin-top:25px" ></a>  	 
+		<a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="notext" data-theme="c" data-transition="slide" data-direction="reverse" class="ui-btn-left" style="margin-top:25px" ></a>  	 
+         
+            <div data-role="popup" data-position-to="window" data-shadow="true" data-overlay-theme="a" id="popupExplain">
+						<p>Ce classement est basé uniquement sur les présences aux matchs et tournois tout au long de la saison.<p>
+						<p>Les indicateurs <img src="img/rank_up.png"/> et <img src="img/rank_down.png"/> montre le sens de la progression au classement du joueur depuis dernière pratique. Le chiffre qui suit, est le nombre de rangs gagnés ou perdus dans le classement. </p>
+			</div>    
+                          	
+	</div>        
+  
+
+    <div data-role="content">
+    
+
+		<div class="list-wrapper">
+ 
+				
+				<ul data-role="listview" data-theme="a" data-divider-theme="c" id="match-players-list" data-count-theme="c">
+				    
+				</ul>
+		</div>
+     
+        <div class="dtlstabletpanel" >
+         	<div class="dtls-wrapper">
+        		
+        		<ul data-role="listview"  id="match-tabletpanel" data-theme="c" class="dtlstablet-lst" data-inset="true">
+            	</ul>
+       		 
+       		 </div>
+        
+    	</div>
+    </div>
+    
+    
+    <div data-theme="c" data-role="footer">
+        <h1 id="foot">...</h1>
+    </div>     
+    
+             
+</div>
+
+<div data-role="page" id="allevents" data-theme="c">
+
+    <div data-theme="c" data-role="header" data-position="fixed" style="padding-top:25px">
+                          
+		 <h1>Évènements</h1>
+		<a href="#popupExplain" data-rel="popup" data-role="button" data-icon="info" data-iconpos="notext"  data-theme="c" class="ui-btn-right" style="margin-top:25px" ></a>  	 
+		<a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="notext" data-theme="c" data-transition="slide" data-direction="reverse" class="ui-btn-left" style="margin-top:25px" ></a>  	 
+         
+            <div data-role="popup" data-position-to="window" data-shadow="true" data-overlay-theme="a" id="popupExplain">
+						<p>Voici tous les évènements de la saison présentement connus.<p>
+						<p>Sélectionnez un évènement pour voir qui y participe.</p>
+			</div>    
+                          	
+	</div>        
+  
+
+    <div data-role="content">
+    
+
+		<div class="list-wrapper">
+ 
+				
+				<ul data-role="listview" id="events-list" data-theme="d">
+				    
+				</ul>
+		</div>
+     
+        <div class="dtlstabletpanel" >
+         	<div class="dtls-wrapper">
+        		
+        		<ul data-role="listview"  id="allevents-tabletpanel" data-theme="c" class="dtlstablet-lst" data-inset="true">
+            	</ul>
+       		 
+       		 <ul data-role="listview"  id="allevent-playerslist" data-theme="c" class="dtlstablet-lst" data-inset="true">
+            	</ul>
+       		 
+       		 </div>
+        
+    	</div>
+    </div>
+                 
+</div>
+
+
+      
+      
+<div data-role="page" id="futureevents" data-theme="c">
+
+    <div data-theme="c" data-role="header" data-position="fixed" style="padding-top:25px">
+                          
+		 <h1>Prochainement</h1>
+		<a href="#popupExplain" data-rel="popup" data-role="button" data-icon="info" data-iconpos="notext"  data-theme="c" class="ui-btn-right" style="margin-top:25px" ></a>  	 
+		<a href="#" data-rel="back" data-role="button" data-icon="back" data-iconpos="notext" data-theme="c" data-transition="slide" data-direction="reverse" class="ui-btn-left" style="margin-top:25px" ></a>  	 
+         
+            <div data-role="popup" data-position-to="window" data-shadow="true" data-overlay-theme="a" id="popupExplain">
+						<p>Voici les futurs évènements de la saison présentement connus.<p>
+						<p>Sélectionnez un évènement pour voir qui y participe.</p>
+			</div>    
+                          	
+	</div>        
+  
+
+    <div data-role="content">
+    
+
+		<div class="list-wrapper">
+ 
+				
+				<ul data-role="listview" id="futureevents-list" data-theme="d">
+				    
+				</ul>
+		</div>
+     
+        <div class="dtlstabletpanel" >
+         	<div class="dtls-wrapper">
+        		
+        		<ul data-role="listview"  id="futureevents-tabletpanel" data-theme="c" class="dtlstablet-lst" data-inset="true">
+            	</ul>
+       		 
+       		 <ul data-role="listview"  id="futureevent-playerslist" data-theme="c" class="dtlstablet-lst" data-inset="true">
+            	</ul>
+       		 
+       		 </div>
+        
+    	</div>
+    </div>
+                 
+</div>
         
         <script type="text/javascript" src="cordova.js"></script>
         <script src="js/main.js" type="text/javascript"></script>
