@@ -7,6 +7,8 @@ background:url(../img/splash640x1136.png) repeat center top;
 }
 
 
+.ui-page { -webkit-backface-visibility: hidden; }
+
 .ui-content {
 
 padding: 0 !important;
