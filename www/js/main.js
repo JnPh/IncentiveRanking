@@ -1,4 +1,4 @@
-var SWroot = 'http://famille.mazet.free.fr/FG/SW/dev/';
+var SWroot = 'http://famille.mazet.free.fr/FG/SW/1.0/';
 
 var TabletManagement =
 {
@@ -96,7 +96,7 @@ var HomePage =
 			$(document).on('pagebeforeshow', '#home', HomePage.LoadData);
 			
 			//Clic Joueur
-			$(document).on('click', '#joueur-list li a', function(event){  
+			$(document).on('vclick', '#joueur-list li a', function(event){  
   			
   			//Id du joueur pour lequel afficher la fiche
     		HomePage.joueurInfo.id = $(this).attr('data-id');
@@ -115,7 +115,7 @@ var HomePage =
 			
 			
 			//Clic Prochainement
-			$(document).on('click', '#whatsnext li a', function(e){  
+			$(document).on('vclick', '#whatsnext li a', function(e){  
     
 	    	HomePage.eventInfo.id = $(this).attr('data-id');
 			app.CurrentEventId = HomePage.eventInfo.id;
@@ -434,7 +434,7 @@ var PracticeRankingPage =
 			$(document).on('pagebeforeshow', '#practicesranking', PracticeRankingPage.LoadData); 
 			
 			//Clic Joueur
-			$(document).on('click', '#practice-players-list li a', function(event){  
+			$(document).on('vclick', '#practice-players-list li a', function(event){  
   			
   			//Id du joueur pour lequel afficher la fiche
     		PracticeRankingPage.joueurInfo.id = $(this).attr('data-id');
@@ -527,7 +527,7 @@ var MatchRankingPage =
 			$(document).on('pagebeforeshow', '#matchranking', MatchRankingPage.LoadData); 
 			
 			//Clic Joueur
-			$(document).on('click', '#match-players-list li a', function(event){  
+			$(document).on('vclick', '#match-players-list li a', function(event){  
   			
   			//Id du joueur pour lequel afficher la fiche
     		MatchRankingPage.joueurInfo.id = $(this).attr('data-id');
@@ -621,7 +621,7 @@ var AllEventsPage =
 			$(document).on('pagebeforeshow', '#allevents', AllEventsPage.LoadData); 
 			
 			//Clic Joueur
-			$(document).on('click', '#events-list li a', function(event){  
+			$(document).on('vclick', '#events-list li a', function(event){  
   			
   			//Id du joueur pour lequel afficher la fiche
     		AllEventsPage.eventInfo.id = $(this).attr('data-id');
@@ -717,7 +717,7 @@ var FutureEventsPage =
 			$(document).on('pagebeforeshow', '#futureevents', FutureEventsPage.LoadData); 
 			
 			//Clic Joueur
-			$(document).on('click', '#futureevents-list li a', function(event){  
+			$(document).on('vclick', '#futureevents-list li a', function(event){  
   			
   			//Id du joueur pour lequel afficher la fiche
     		FutureEventsPage.eventInfo.id = $(this).attr('data-id');

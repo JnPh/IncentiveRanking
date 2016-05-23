@@ -3,16 +3,15 @@
 background: -o-linear-gradient(bottom right, #0a0b49, #7979bf); /* For Opera 11.1 to 12.0 */
 background: -moz-linear-gradient(bottom right, #0a0b49, #7979bf); /* For Firefox 3.6 to 15 */
 background: linear-gradient(to bottom right, #0a0b49 , #7979bf); /* Standard syntax */
-background:url(../img/splash640x1136.png) repeat center top; 
+background:url(../img/splash640x1136_blur.png) repeat center top; 
+background-attachment: fixed;
 }
 
-
-.ui-page { -webkit-backface-visibility: hidden; }
 
 .ui-content {
 
 padding: 0 !important;
-
+ 
 }
 
 #menupanel
@@ -76,7 +75,7 @@ margin:12px;
 }
 */
 
-li { opacity: 0.9; }
+li { opacity: 0.55; }
 
 .playerdetails
 {
