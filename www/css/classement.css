@@ -8,6 +8,17 @@ background-attachment: fixed;
 }
 
 
+#splash {
+  background: -webkit-linear-gradient(left top, #0a0b49 , #7979bf); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(bottom right, #0a0b49, #7979bf); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(bottom right, #0a0b49, #7979bf); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to bottom right, #0a0b49 , #7979bf); /* Standard syntax */
+background:url(../img/splash640x1136.png) repeat center top; 
+background-attachment: fixed;
+}
+
+
+
 .ui-content {
 
 padding: 0 !important;
@@ -29,7 +40,7 @@ padding: 0 !important;
 
 #menupanel
 {
-	background-color: #cccccc; !important;
+	background-color: #ccccdd; !important;
 }
 
 
@@ -75,7 +86,10 @@ margin:12px;
 }
 */
 
-li { opacity: 0.55; }
+li { opacity: 0.60; }
+
+#menupanel li { opacity: 1; }
+
 
 .playerdetails
 {
